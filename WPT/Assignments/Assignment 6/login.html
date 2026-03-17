@@ -1,0 +1,59 @@
+<!-- 1) create login.html 
+    
+	accept username and password from user 
+
+perform validation for both textfield 
+
+	i) textfield should contain data 
+	ii) length of password should between 8 to 12 characters 
+
+if username == iet and password == iet 
+
+then forward control to Home.html  -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function validate()
+         {
+            var username = document.getElementById("sname").value;
+            var password = document.getElementById("password").value;
+
+            if(username =="" || password =="") {
+                alert("Both Username and Password are required");
+                return false;
+            }
+
+            if(password.length < 8 || password.length > 12){
+            alert("password must be between 9 and 12 character");
+            return false;
+            }
+
+            if(username == "iet" && password == "iet12345"){
+                
+                alert ("Forward to page Username Or Password");
+                
+                return true;
+            }
+
+            alert("Login Successful");
+            return true;
+
+          }
+         
+    </script>
+</head>
+<body>
+    <form name="form1" onsubmit="return validate()" action="home.html" >
+        <input type="text" id="sname">
+        <input type="password" id="password">
+        <button type="submit" id="submit">submit</button>
+    </form>
+</body>
+</html>
