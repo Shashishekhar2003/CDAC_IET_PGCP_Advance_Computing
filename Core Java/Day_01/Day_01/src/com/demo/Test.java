@@ -1,0 +1,20 @@
+package com.demo;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		 int x=12;
+//			//explicit typecasting
+//      byte b=(byte)x;
+//      long d=67l;
+//				float f=45.6f;
+//				//implicit typecasting
+//      float f=d;
+//				//final means constant variables
+//				final int x=90;
+
+
+	}
+
+}
