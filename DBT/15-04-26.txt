@@ -1,0 +1,806 @@
+Enter password: ***********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.42 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| april2025          |
+| coin               |
+| information_schema |
+| mysql              |
+| performance_schema |
+| springdb           |
+| students           |
+| sys                |
++--------------------+
+8 rows in set (0.07 sec)
+
+mysql> use database students;
+ERROR 1049 (42000): Unknown database 'database'
+mysql> use students;
+Database changed
+mysql> select database();
++------------+
+| database() |
++------------+
+| students   |
++------------+
+1 row in set (0.00 sec)
+
+mysql> show tables;
+Empty set (0.05 sec)
+
+mysql> desc studengts
+    -> ;
+ERROR 1146 (42S02): Table 'students.studengts' doesn't exist
+mysql> create database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> create database MyData;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| april2025          |
+| coin               |
+| information_schema |
+| mydata             |
+| mysql              |
+| performance_schema |
+| springdb           |
+| students           |
+| sys                |
++--------------------+
+9 rows in set (0.01 sec)
+
+mysql> use database mydata;
+ERROR 1049 (42000): Unknown database 'database'
+mysql> use database MyData;
+ERROR 1049 (42000): Unknown database 'database'
+mysql> use mydata;
+Database changed
+mysql> select mydata;
+ERROR 1054 (42S22): Unknown column 'mydata' in 'field list'
+mysql>
+mysql> select databases();
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'databases()' at line 1
+mysql> select database();
++------------+
+| database() |
++------------+
+| mydata     |
++------------+
+1 row in set (0.00 sec)
+
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table(id int, name varchar(20),marks char(10));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(id int, name varchar(20),marks char(10))' at line 1
+mysql> create table mydata(id int, name varchar(20),marks char(10));
+Query OK, 0 rows affected (0.13 sec)
+
+mysql> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> show columns;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> show full table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'table' at line 1
+mysql> desc mydata;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
+| marks | char(10)    | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.02 sec)
+
+mysql> insert into mydata(01,Shashi,95);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '01,Shashi,95)' at line 1
+mysql> insert into mydata(01,"Shashi","95");
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '01,"Shashi","95")' at line 1
+mysql> insert into mydata(01,"Shashi",95);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '01,"Shashi",95)' at line 1
+mysql> insert into mydata values (01,"Shashi",95);
+Query OK, 1 row affected (0.04 sec)
+
+mysql> desc mydata;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
+| marks | char(10)    | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select id,name,marks;
+ERROR 1054 (42S22): Unknown column 'id' in 'field list'
+mysql> select id,name,marks from mydata;
++------+--------+-------+
+| id   | name   | marks |
++------+--------+-------+
+|    1 | Shashi | 95    |
++------+--------+-------+
+1 row in set (0.00 sec)
+
+mysql> insert into mydata values (02,"Asit",96),(03,"Sandesh",98);
+Query OK, 2 rows affected (0.02 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> desc mydata;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
+| marks | char(10)    | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select id,name,marks from mydata;
++------+---------+-------+
+| id   | name    | marks |
++------+---------+-------+
+|    1 | Shashi  | 95    |
+|    2 | Asit    | 96    |
+|    3 | Sandesh | 98    |
++------+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from mydata;
++------+---------+-------+
+| id   | name    | marks |
++------+---------+-------+
+|    1 | Shashi  | 95    |
+|    2 | Asit    | 96    |
+|    3 | Sandesh | 98    |
++------+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> insert into mydata values (04,"Akshay",96),(05,"Yash",98);
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from mydata;
++------+---------+-------+
+| id   | name    | marks |
++------+---------+-------+
+|    1 | Shashi  | 95    |
+|    2 | Asit    | 96    |
+|    3 | Sandesh | 98    |
+|    4 | Akshay  | 96    |
+|    5 | Yash    | 98    |
++------+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> desc mydata;\
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
+| marks | char(10)    | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql> select id,name,marks,id,name,marks from mydata;
++------+---------+-------+------+---------+-------+
+| id   | name    | marks | id   | name    | marks |
++------+---------+-------+------+---------+-------+
+|    1 | Shashi  | 95    |    1 | Shashi  | 95    |
+|    2 | Asit    | 96    |    2 | Asit    | 96    |
+|    3 | Sandesh | 98    |    3 | Sandesh | 98    |
+|    4 | Akshay  | 96    |    4 | Akshay  | 96    |
+|    5 | Yash    | 98    |    5 | Yash    | 98    |
++------+---------+-------+------+---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select name from mydata;
++---------+
+| name    |
++---------+
+| Shashi  |
+| Asit    |
+| Sandesh |
+| Akshay  |
+| Yash    |
++---------+
+5 rows in set (0.00 sec)
+
+mysql> select name,marks from mydata;
++---------+-------+
+| name    | marks |
++---------+-------+
+| Shashi  | 95    |
+| Asit    | 96    |
+| Sandesh | 98    |
+| Akshay  | 96    |
+| Yash    | 98    |
++---------+-------+
+5 rows in set (0.00 sec)
+
+mysql> select "Hello MySQL";
++-------------+
+| Hello MySQL |
++-------------+
+| Hello MySQL |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select "Hello MySQL" S1;
++-------------+
+| S1          |
++-------------+
+| Hello MySQL |
++-------------+
+1 row in set (0.00 sec)
+
+mysql> select "264";
++-----+
+| 264 |
++-----+
+| 264 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select "Hello MySQL" S1 'Hello JAVA' S2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Hello JAVA' S2' at line 1
+mysql> select "Hello MySQL" S1, 'Hello JAVA' S2;
++-------------+------------+
+| S1          | S2         |
++-------------+------------+
+| Hello MySQL | Hello JAVA |
++-------------+------------+
+1 row in set (0.00 sec)
+
+mysql> select "264" A1,'100' B1;
++-----+-----+
+| A1  | B1  |
++-----+-----+
+| 264 | 100 |
++-----+-----+
+1 row in set (0.00 sec)
+
+mysql> select 264 + 10 S1;
++-----+
+| S1  |
++-----+
+| 274 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select 264 - 10 S1;
++-----+
+| S1  |
++-----+
+| 254 |
++-----+
+1 row in set (0.01 sec)
+
+mysql> select 264 / 10 S1;
++---------+
+| S1      |
++---------+
+| 26.4000 |
++---------+
+1 row in set (0.00 sec)
+
+mysql> select 264 * 10 + 5 S1;
++------+
+| S1   |
++------+
+| 2645 |
++------+
+1 row in set (0.00 sec)
+
+mysql> select 500-1000 S1;
++------+
+| S1   |
++------+
+| -500 |
++------+
+1 row in set (0.00 sec)
+
+mysql> select 500/1000 S1;
++--------+
+| S1     |
++--------+
+| 0.5000 |
++--------+
+1 row in set (0.00 sec)
+
+mysql> select database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> select database();
++------------+
+| database() |
++------------+
+| mydata     |
++------------+
+1 row in set (0.00 sec)
+
+mysql> show table mydata;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mydata' at line 1
+mysql> show table ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> desc mydata;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | YES  |     | NULL    |       |
+| name  | varchar(20) | YES  |     | NULL    |       |
+| marks | char(10)    | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.01 sec)
+
+mysql> source E:\C-DAC\PGCP-AC\C++.SQL
+ERROR:
+Failed to open file 'E:\C-DAC\PGCP-AC\C++.SQL', error: 2
+mysql> source C:\ .SQL;
+ERROR:
+Unknown command '\ '.
+ERROR:
+Failed to open file 'C:\ .SQL', error: 2
+mysql> source C: .SQL;
+ERROR:
+Failed to open file 'C: .SQL', error: 2
+mysql> source C:\Program Files (x86).SQL
+ERROR:
+Failed to open file 'C:\Program Files (x86).SQL', error: 2
+mysql> show tables;
++------------------+
+| Tables_in_mydata |
++------------------+
+| mydata           |
++------------------+
+1 row in set (0.05 sec)
+
+mysql> show tables mydata;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mydata' at line 1
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| april2025          |
+| coin               |
+| information_schema |
+| mydata             |
+| mysql              |
+| performance_schema |
+| springdb           |
+| students           |
+| sys                |
++--------------------+
+9 rows in set (0.00 sec)
+
+mysql> use mydata;
+Database changed
+mysql> show tables;
++------------------+
+| Tables_in_mydata |
++------------------+
+| mydata           |
++------------------+
+1 row in set (0.00 sec)
+
+mysql> create table Student (id int,  First Name varchar(20),Last Name varchar(20));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Name varchar(20),Last Name varchar(20))' at line 1
+mysql> create table Student (id int,  Fname varchar(20),Lname varchar(20));
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> show tables;
++------------------+
+| Tables_in_mydata |
++------------------+
+| mydata           |
+| student          |
++------------------+
+2 rows in set (0.00 sec)
+
+mysql> inser into student(1,'Akshay','Birajdar');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inser into student(1,'Akshay','Birajdar')' at line 1
+mysql> inser into student values(1,'Akshay','Birajdar');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inser into student values(1,'Akshay','Birajdar')' at line 1
+mysql> insert into student values(1,'Akshay','Birajdar');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Student;
++------+--------+----------+
+| id   | Fname  | Lname    |
++------+--------+----------+
+|    1 | Akshay | Birajdar |
++------+--------+----------+
+1 row in set (0.00 sec)
+
+mysql> insert into student values(2,'Yashodeep','Badge')(3,'Om','Khinde')(4,'Vivek','Kumbharkar');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(3,'Om','Khinde')(4,'Vivek','Kumbharkar')' at line 1
+mysql> insert into student values(2,'Yashodeep','Badge'),(3,'Om','Khinde'),(4,'Vivek','Kumbharkar');
+Query OK, 3 rows affected (0.02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> show tables;
++------------------+
+| Tables_in_mydata |
++------------------+
+| mydata           |
+| student          |
++------------------+
+2 rows in set (0.01 sec)
+
+mysql> select * from Student;
++------+-----------+------------+
+| id   | Fname     | Lname      |
++------+-----------+------------+
+|    1 | Akshay    | Birajdar   |
+|    2 | Yashodeep | Badge      |
+|    3 | Om        | Khinde     |
+|    4 | Vivek     | Kumbharkar |
++------+-----------+------------+
+4 rows in set (0.00 sec)
+
+mysql> alter table Student add column city varchar(20);
+Query OK, 0 rows affected (0.06 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> show tables;
++------------------+
+| Tables_in_mydata |
++------------------+
+| mydata           |
+| student          |
++------------------+
+2 rows in set (0.01 sec)
+
+mysql> select * from Student;
++------+-----------+------------+------+
+| id   | Fname     | Lname      | city |
++------+-----------+------------+------+
+|    1 | Akshay    | Birajdar   | NULL |
+|    2 | Yashodeep | Badge      | NULL |
+|    3 | Om        | Khinde     | NULL |
+|    4 | Vivek     | Kumbharkar | NULL |
++------+-----------+------------+------+
+4 rows in set (0.00 sec)
+
+mysql> insert into student values(5,'Shubham','Jadhav',"Nilanga");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Student;
++------+-----------+------------+---------+
+| id   | Fname     | Lname      | city    |
++------+-----------+------------+---------+
+|    1 | Akshay    | Birajdar   | NULL    |
+|    2 | Yashodeep | Badge      | NULL    |
+|    3 | Om        | Khinde     | NULL    |
+|    4 | Vivek     | Kumbharkar | NULL    |
+|    5 | Shubham   | Jadhav     | Nilanga |
++------+-----------+------------+---------+
+5 rows in set (0.00 sec)
+
+mysql> update Student set city= "Nalegaon" where city is null;
+Query OK, 4 rows affected (0.02 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+mysql> select * from Student;
++------+-----------+------------+----------+
+| id   | Fname     | Lname      | city     |
++------+-----------+------------+----------+
+|    1 | Akshay    | Birajdar   | Nalegaon |
+|    2 | Yashodeep | Badge      | Nalegaon |
+|    3 | Om        | Khinde     | Nalegaon |
+|    4 | Vivek     | Kumbharkar | Nalegaon |
+|    5 | Shubham   | Jadhav     | Nilanga  |
++------+-----------+------------+----------+
+5 rows in set (0.00 sec)
+
+mysql> update Student set city= "Null" where id is 2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '2' at line 1
+mysql> update Student set city= "Null" where id=2;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Student;
++------+-----------+------------+----------+
+| id   | Fname     | Lname      | city     |
++------+-----------+------------+----------+
+|    1 | Akshay    | Birajdar   | Nalegaon |
+|    2 | Yashodeep | Badge      | Null     |
+|    3 | Om        | Khinde     | Nalegaon |
+|    4 | Vivek     | Kumbharkar | Nalegaon |
+|    5 | Shubham   | Jadhav     | Nilanga  |
++------+-----------+------------+----------+
+5 rows in set (0.00 sec)
+
+mysql> update Student set city= "Null" where id=3;
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> update Student set city= "Null" where id=4;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from Student;
++------+-----------+------------+----------+
+| id   | Fname     | Lname      | city     |
++------+-----------+------------+----------+
+|    1 | Akshay    | Birajdar   | Nalegaon |
+|    2 | Yashodeep | Badge      | Null     |
+|    3 | Om        | Khinde     | Null     |
+|    4 | Vivek     | Kumbharkar | Null     |
+|    5 | Shubham   | Jadhav     | Nilanga  |
++------+-----------+------------+----------+
+5 rows in set (0.00 sec)
+
+mysql> desc student;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | YES  |     | NULL    |       |
+| Fname | varchar(20) | YES  |     | NULL    |       |
+| Lname | varchar(20) | YES  |     | NULL    |       |
+| city  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> update Student set city= "Udgir" where id=4,id=2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',id=2' at line 1
+mysql> update Student set city= "Udgir" where id=4 or id=2;
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> select * from Student;
++------+-----------+------------+----------+
+| id   | Fname     | Lname      | city     |
++------+-----------+------------+----------+
+|    1 | Akshay    | Birajdar   | Nalegaon |
+|    2 | Yashodeep | Badge      | Udgir    |
+|    3 | Om        | Khinde     | Null     |
+|    4 | Vivek     | Kumbharkar | Udgir    |
+|    5 | Shubham   | Jadhav     | Nilanga  |
++------+-----------+------------+----------+
+5 rows in set (0.00 sec)
+
+mysql> desc student;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | YES  |     | NULL    |       |
+| Fname | varchar(20) | YES  |     | NULL    |       |
+| Lname | varchar(20) | YES  |     | NULL    |       |
+| city  | varchar(20) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select true,false;
++------+-------+
+| true | false |
++------+-------+
+|    1 |     0 |
++------+-------+
+1 row in set (0.00 sec)
+
+mysql> select 1=1;
++-----+
+| 1=1 |
++-----+
+|   1 |
++-----+
+1 row in set (0.00 sec)
+
+mysql> select 1=10;
++------+
+| 1=10 |
++------+
+|    0 |
++------+
+1 row in set (0.00 sec)
+
+mysql> select 1=1b;
+ERROR 1054 (42S22): Unknown column '1b' in 'field list'
+mysql> select 1="1b";
++--------+
+| 1="1b" |
++--------+
+|      1 |
++--------+
+1 row in set, 1 warning (0.01 sec)
+
+mysql> select 1="b1";
++--------+
+| 1="b1" |
++--------+
+|      0 |
++--------+
+1 row in set, 1 warning (0.00 sec)
+
+mysql> select * from Student;
++------+-----------+------------+----------+
+| id   | Fname     | Lname      | city     |
++------+-----------+------------+----------+
+|    1 | Akshay    | Birajdar   | Nalegaon |
+|    2 | Yashodeep | Badge      | Udgir    |
+|    3 | Om        | Khinde     | Null     |
+|    4 | Vivek     | Kumbharkar | Udgir    |
+|    5 | Shubham   | Jadhav     | Nilanga  |
++------+-----------+------------+----------+
+5 rows in set (0.00 sec)
+
+mysql> delete from Student;
+Query OK, 5 rows affected (0.06 sec)
+
+mysql> select * from Student;
+Empty set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from Student;
+Empty set (0.00 sec)
+
+mysql> select * from Student;
+Empty set (0.00 sec)
+
+mysql> show variables like 'auto%';
++--------------------------+-------+
+| Variable_name            | Value |
++--------------------------+-------+
+| auto_generate_certs      | ON    |
+| auto_increment_increment | 1     |
+| auto_increment_offset    | 1     |
+| autocommit               | ON    |
+| automatic_sp_privileges  | ON    |
++--------------------------+-------+
+5 rows in set (0.03 sec)
+
+mysql> set autocommit= off;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> show variables like 'auto%';
++--------------------------+-------+
+| Variable_name            | Value |
++--------------------------+-------+
+| auto_generate_certs      | ON    |
+| auto_increment_increment | 1     |
+| auto_increment_offset    | 1     |
+| autocommit               | OFF   |
+| automatic_sp_privileges  | ON    |
++--------------------------+-------+
+5 rows in set (0.01 sec)
+
+mysql> commit;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from Student;
+Empty set (0.00 sec)
+
+mysql> inser into student(1,'Akshay','Birajdar');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inser into student(1,'Akshay','Birajdar')' at line 1
+mysql> insert into student(1,'Akshay','Birajdar');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,'Akshay','Birajdar')' at line 1
+mysql> insert into student values(1,'Akshay','Birajdar');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into student value(1,'Akshay','Birajdar');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> show tables;
++------------------+
+| Tables_in_mydata |
++------------------+
+| mydata           |
+| student          |
++------------------+
+2 rows in set (0.01 sec)
+
+mysql> create table student(id int,fname char(20),lname varchar(20),city varchar(20));
+ERROR 1050 (42S01): Table 'student' already exists
+mysql> inser into student(1,'Akshay','Birajdar');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'inser into student(1,'Akshay','Birajdar')' at line 1
+mysql> insert into student values(1,'Akshay','Birajdar');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into student values(1,'Akshay','Birajdar');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into student values(1,'Akshay','Birajdar','Nalegaon');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values(2,'Yashodeep','Badge','udgir')(3,'Om','Khinde','Null')(4,'Vivek','Kumbharkar','Udgir');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(3,'Om','Khinde','Null')(4,'Vivek','Kumbharkar','Udgir')' at line 1
+mysql> insert into student values(2,'Yashodeep','Badge','udgir')(3,'Om','Khinde','udgir')(4,'Vivek','Kumbharkar','Udgir');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(3,'Om','Khinde','udgir')(4,'Vivek','Kumbharkar','Udgir')' at line 1
+mysql> insert into student values(2,'Yashodeep','Badge','udgir'),(3,'Om','Khinde','udgir'),(4,'Vivek','Kumbharkar','Udgir');
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from Student;
++------+-----------+------------+----------+
+| id   | Fname     | Lname      | city     |
++------+-----------+------------+----------+
+|    1 | Akshay    | Birajdar   | Nalegaon |
+|    2 | Yashodeep | Badge      | udgir    |
+|    3 | Om        | Khinde     | udgir    |
+|    4 | Vivek     | Kumbharkar | Udgir    |
++------+-----------+------------+----------+
+4 rows in set (0.00 sec)
+
+mysql> insert into student values(5,'Shubham','Jadhav',"Nilanga");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from Student;
++------+-----------+------------+----------+
+| id   | Fname     | Lname      | city     |
++------+-----------+------------+----------+
+|    1 | Akshay    | Birajdar   | Nalegaon |
+|    2 | Yashodeep | Badge      | udgir    |
+|    3 | Om        | Khinde     | udgir    |
+|    4 | Vivek     | Kumbharkar | Udgir    |
+|    5 | Shubham   | Jadhav     | Nilanga  |
++------+-----------+------------+----------+
+5 rows in set (0.00 sec)
+
+mysql> delete from student;
+Query OK, 5 rows affected (0.00 sec)
+
+mysql> select * from Student;
+Empty set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> select * from Student;
+Empty set (0.00 sec)
+
+mysql> insert into student values(1,'Akshay','Birajdar');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> insert into student values(1,'Akshay','Birajdar','Nalegaon');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into student values(2,'Yashodeep','Badge','udgir')(3,'Om','Khinde','udgir')(4,'Vivek','Kumbharkar','Udgir');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '(3,'Om','Khinde','udgir')(4,'Vivek','Kumbharkar','Udgir')' at line 1
+mysql> insert into student values(2,'Yashodeep','Badge','udgir'),(3,'Om','Khinde','udgir'),(4,'Vivek','Kumbharkar','Udgir');
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> insert into student values(5,'Shubham','Jadhav',"Nilanga");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from Student;
++------+-----------+------------+----------+
+| id   | Fname     | Lname      | city     |
++------+-----------+------------+----------+
+|    1 | Akshay    | Birajdar   | Nalegaon |
+|    2 | Yashodeep | Badge      | udgir    |
+|    3 | Om        | Khinde     | udgir    |
+|    4 | Vivek     | Kumbharkar | Udgir    |
+|    5 | Shubham   | Jadhav     | Nilanga  |
++------+-----------+------------+----------+
+5 rows in set (0.00 sec)
+
+mysql> show variables like 'auto%';
++--------------------------+-------+
+| Variable_name            | Value |
++--------------------------+-------+
+| auto_generate_certs      | ON    |
+| auto_increment_increment | 1     |
+| auto_increment_offset    | 1     |
+| autocommit               | OFF   |
+| automatic_sp_privileges  | ON    |
++--------------------------+-------+
+5 rows in set (0.01 sec)
+
+mysql>
