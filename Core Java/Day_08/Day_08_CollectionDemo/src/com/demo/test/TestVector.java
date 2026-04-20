@@ -1,0 +1,36 @@
+package com.demo.test;
+
+import java.util.List;
+import java.util.Vector;
+
+public class TestVector {
+	public static void main(String[] args) {
+		List<Integer> v= new Vector<>(20,5);
+		v.add(10);
+		v.add(45);
+		v.add(30);
+		    System.out.println("capacity:"+((Vector<Integer>)v).capacity());
+			System.out.println("size:"+((Vector<Integer>)v).size());
+			for(int i=1;i<=20;i++) {
+				v.add(100+i);
+			}
+			
+			 System.out.println("capacity:"+((Vector<Integer>)v).capacity());
+			 System.out.println("size:"+((Vector<Integer>)v).size());
+			 System.out.println(v);
+		    	for(int i=1;i<=10;i++) {
+			    v.add(100+i);
+			}
+		    	
+		    System.out.println("capacity:"+((Vector<Integer>)v).capacity());
+			System.out.println("size:"+((Vector<Integer>)v).size());
+		    System.out.println(v);
+		    
+		    System.out.println("capacity:"+((Vector<Integer>)v).capacity());
+		    System.out.println("size:"+((Vector<Integer>)v).size());
+		    
+		    v.add(22);
+		    System.out.println(v);
+	}
+
+}
