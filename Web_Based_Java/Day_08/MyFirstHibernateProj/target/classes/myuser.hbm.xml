@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<hibernate-mapping>
+	     <class name="com.demo.model.MyUSer" table="myuser11">
+	          <id name="uid">
+	               <generator class="assigned"></generator>
+	          </id>
+	          <property  name="name" type="string" column="uname"></property>
+	          <property  name="mobile" type="string" ></property>
+	          <property  name="email" type="string" ></property>
+	     </class> 
+	    
+	</hibernate-mapping>
