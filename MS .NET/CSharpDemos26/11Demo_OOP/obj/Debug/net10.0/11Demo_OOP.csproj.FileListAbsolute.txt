@@ -1,0 +1,14 @@
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\11Demo_OOP\bin\Debug\net10.0\11Demo_OOP.exe
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\11Demo_OOP\bin\Debug\net10.0\11Demo_OOP.deps.json
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\11Demo_OOP\bin\Debug\net10.0\11Demo_OOP.runtimeconfig.json
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\11Demo_OOP\bin\Debug\net10.0\11Demo_OOP.dll
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\11Demo_OOP\bin\Debug\net10.0\11Demo_OOP.pdb
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\11Demo_OOP\obj\Debug\net10.0\11Demo_OOP.GeneratedMSBuildEditorConfig.editorconfig
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\11Demo_OOP\obj\Debug\net10.0\11Demo_OOP.AssemblyInfoInputs.cache
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\11Demo_OOP\obj\Debug\net10.0\11Demo_OOP.AssemblyInfo.cs
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\11Demo_OOP\obj\Debug\net10.0\11Demo_OOP.csproj.CoreCompileInputs.cache
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\11Demo_OOP\obj\Debug\net10.0\11Demo_OOP.dll
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\11Demo_OOP\obj\Debug\net10.0\refint\11Demo_OOP.dll
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\11Demo_OOP\obj\Debug\net10.0\11Demo_OOP.pdb
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\11Demo_OOP\obj\Debug\net10.0\11Demo_OOP.genruntimeconfig.cache
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\11Demo_OOP\obj\Debug\net10.0\ref\11Demo_OOP.dll
