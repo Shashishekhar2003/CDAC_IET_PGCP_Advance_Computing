@@ -1,0 +1,7 @@
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\18Demo_Delegate\bin\Debug\18Demo_Delegate.exe.config
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\18Demo_Delegate\bin\Debug\18Demo_Delegate.exe
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\18Demo_Delegate\bin\Debug\18Demo_Delegate.pdb
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\18Demo_Delegate\obj\Debug\18Demo_Delegate.csproj.AssemblyReference.cache
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\18Demo_Delegate\obj\Debug\18Demo_Delegate.csproj.CoreCompileInputs.cache
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\18Demo_Delegate\obj\Debug\18Demo_Delegate.exe
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\18Demo_Delegate\obj\Debug\18Demo_Delegate.pdb
