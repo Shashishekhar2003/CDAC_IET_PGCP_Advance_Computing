@@ -1,0 +1,2 @@
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\15Demo_OOP\obj\Debug\15Demo_OOP.csproj.AssemblyReference.cache
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\15Demo_OOP\obj\Debug\15Demo_OOP.csproj.CoreCompileInputs.cache
