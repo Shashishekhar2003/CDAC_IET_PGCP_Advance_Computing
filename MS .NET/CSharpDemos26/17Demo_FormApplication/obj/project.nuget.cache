@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "JhMpilVT44M=",
+  "success": true,
+  "projectFilePath": "E:\\C-DAC\\PGCP-AC\\.NET\\CSharpDemos26\\17Demo_FormApplication\\17Demo_FormApplication.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUSU\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.28\\microsoft.windowsdesktop.app.ref.8.0.28.nupkg.sha512",
+    "C:\\Users\\ASUSU\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.28\\microsoft.netcore.app.ref.8.0.28.nupkg.sha512",
+    "C:\\Users\\ASUSU\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.28\\microsoft.aspnetcore.app.ref.8.0.28.nupkg.sha512",
+    "C:\\Users\\ASUSU\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.28\\microsoft.netcore.app.host.win-x64.8.0.28.nupkg.sha512"
+  ],
+  "logs": []
+}

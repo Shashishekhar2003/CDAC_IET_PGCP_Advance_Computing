@@ -1,0 +1,16 @@
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\bin\Debug\net8.0-windows\17Demo_FormApplication.exe
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\bin\Debug\net8.0-windows\17Demo_FormApplication.deps.json
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\bin\Debug\net8.0-windows\17Demo_FormApplication.runtimeconfig.json
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\bin\Debug\net8.0-windows\17Demo_FormApplication.dll
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\bin\Debug\net8.0-windows\17Demo_FormApplication.pdb
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\obj\Debug\net8.0-windows\_17Demo_FormApplication.Form1.resources
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\obj\Debug\net8.0-windows\17Demo_FormApplication.csproj.GenerateResource.cache
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\obj\Debug\net8.0-windows\17Demo_FormApplication.GeneratedMSBuildEditorConfig.editorconfig
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\obj\Debug\net8.0-windows\17Demo_FormApplication.AssemblyInfoInputs.cache
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\obj\Debug\net8.0-windows\17Demo_FormApplication.AssemblyInfo.cs
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\obj\Debug\net8.0-windows\17Demo_FormApplication.csproj.CoreCompileInputs.cache
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\obj\Debug\net8.0-windows\17Demo_FormApplication.dll
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\obj\Debug\net8.0-windows\refint\17Demo_FormApplication.dll
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\obj\Debug\net8.0-windows\17Demo_FormApplication.pdb
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\obj\Debug\net8.0-windows\17Demo_FormApplication.genruntimeconfig.cache
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\17Demo_FormApplication\obj\Debug\net8.0-windows\ref\17Demo_FormApplication.dll
