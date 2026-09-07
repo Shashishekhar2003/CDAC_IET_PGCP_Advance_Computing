@@ -1,0 +1,7 @@
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\28Demo_FileIO\bin\Debug\28Demo_FileIO.exe.config
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\28Demo_FileIO\bin\Debug\28Demo_FileIO.exe
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\28Demo_FileIO\bin\Debug\28Demo_FileIO.pdb
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\28Demo_FileIO\obj\Debug\28Demo_FileIO.csproj.AssemblyReference.cache
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\28Demo_FileIO\obj\Debug\28Demo_FileIO.csproj.CoreCompileInputs.cache
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\28Demo_FileIO\obj\Debug\28Demo_FileIO.exe
+E:\C-DAC\PGCP-AC\.NET\CSharpDemos26\28Demo_FileIO\obj\Debug\28Demo_FileIO.pdb
